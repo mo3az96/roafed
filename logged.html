@@ -170,29 +170,62 @@
             </ul>
           </nav>
           <div class="user-head">
-            <button
-              type="button"
-              data-bs-toggle="modal"
-              data-bs-target="#loginModal"
-              class="reg-btn"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="15.811"
-                height="16.166"
-                viewBox="0 0 15.811 16.166"
-              >
-                <g id="noun-user-4875762" transform="translate(-82.468 -56)">
-                  <path
-                    id="Path_6"
-                    data-name="Path 6"
-                    d="M134.779,60.041a4.041,4.041,0,1,1,4.041,4.041A4.046,4.046,0,0,1,134.779,60.041Zm11.892,9.643a5.848,5.848,0,0,0-5.83-4.793H136.8a5.848,5.848,0,0,0-5.83,4.793,2.021,2.021,0,0,0,1.969,2.481H144.7a2.021,2.021,0,0,0,1.969-2.481Z"
-                    transform="translate(-48.447)"
-                  />
-                </g>
-              </svg>
-              <span class="text"> تسجيل الدخول </span>
-            </button>
+            <div class="user-list">
+              <div class="user-list-head">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="15.811"
+                  height="16.166"
+                  viewBox="0 0 15.811 16.166"
+                >
+                  <g id="noun-user-4875762" transform="translate(-82.468 -56)">
+                    <path
+                      id="Path_6"
+                      data-name="Path 6"
+                      d="M134.779,60.041a4.041,4.041,0,1,1,4.041,4.041A4.046,4.046,0,0,1,134.779,60.041Zm11.892,9.643a5.848,5.848,0,0,0-5.83-4.793H136.8a5.848,5.848,0,0,0-5.83,4.793,2.021,2.021,0,0,0,1.969,2.481H144.7a2.021,2.021,0,0,0,1.969-2.481Z"
+                      transform="translate(-48.447)"
+                    />
+                  </g>
+                </svg>
+                <span class="text"> مرحبا , محمود </span>
+                <span class="arrow">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="13.713"
+                    height="7.661"
+                    viewBox="0 0 13.713 7.661"
+                  >
+                    <g
+                      id="noun-right-1920905"
+                      transform="translate(27.922 -78.165) rotate(90)"
+                    >
+                      <path
+                        id="Path_8"
+                        data-name="Path 8"
+                        d="M202.138,27.922a.819.819,0,0,1-.578-.231.8.8,0,0,1,0-1.141l5.473-5.487-5.473-5.473a.8.8,0,0,1,0-1.141.815.815,0,0,1,1.141-.015l6.051,6.051a.8.8,0,0,1,.231.578.858.858,0,0,1-.231.578L202.7,27.69a.786.786,0,0,1-.563.231Z"
+                        transform="translate(-123.157)"
+                      />
+                    </g>
+                  </svg>
+                </span>
+              </div>
+              <div class="user-list-menu">
+                <button
+                  type="button"
+                  data-bs-toggle="modal"
+                  data-bs-target="#passModal"
+                >
+                  تعديل كلمة المرور
+                </button>
+                <button
+                  type="button"
+                  data-bs-toggle="modal"
+                  data-bs-target="#logoutModal"
+                >
+                  تسجيل الخروج
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -1257,14 +1290,14 @@
       </div>
     </footer>
     <!-- End Footer -->
-
     <p class="copyrights">جميع الحقوق محفوظة 2022 <span>Roafed</span></p>
+
     <!-- Modal -->
     <div
       class="modal fade"
-      id="loginModal"
+      id="passModal"
       tabindex="-1"
-      aria-labelledby="loginModalLabel"
+      aria-labelledby="passModalLabel"
       aria-hidden="true"
     >
       <div class="modal-dialog modal-dialog-centered">
@@ -1291,33 +1324,82 @@
             </svg>
           </button>
           <div class="modal-body">
-            <div class="modal-logo">
-              <img src="images/logo.png" class="img-fluid" />
-            </div>
-            <h3 class="modal-title">تسجيل الدخول</h3>
-            <h6 class="modal-subtitle">قم بإدخال رقم الجوال وكلمة المرور</h6>
+            <h3 class="modal-title">تعديل كلمة المرور</h3>
+            <h6 class="modal-subtitle">قم بتعيين كلمة مرور جديدة خاصة بك</h6>
             <form class="login-form">
               <div class="form-group">
                 <input
-                  type="tel"
-                  placeholder="رقم الجوال"
+                  type="password"
+                  placeholder="كلمة المرور الحالية"
                   class="form-control"
                 />
               </div>
               <div class="form-group">
                 <input
                   type="password"
-                  placeholder="كلمة المرور"
+                  placeholder="كلمة المرور الجديدة"
                   class="form-control"
                 />
               </div>
-              <!-- <button class="btn btn-primary">دخول</button> -->
-              <a href="logged.html" class="btn btn-primary">دخول</a>
+              <div class="form-group">
+                <input
+                  type="password"
+                  placeholder="إعادة كتابة كلمة المرور الجديدة"
+                  class="form-control"
+                />
+              </div>
+              <button class="btn btn-primary">حفظ التعديلات</button>
             </form>
           </div>
         </div>
       </div>
     </div>
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="logoutModal"
+      tabindex="-1"
+      aria-labelledby="logoutModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <button
+            type="button"
+            class="closeModal"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="6.82"
+              height="8.392"
+              viewBox="0 0 6.82 8.392"
+            >
+              <path
+                id="Path_55245"
+                data-name="Path 55245"
+                d="M2.244-8.016A.969.969,0,0,0,.9-8.208.984.984,0,0,0,.708-6.852L5.616-.384A.969.969,0,0,0,6.96-.192a.971.971,0,0,0,.192-1.344ZM7.152-6.852l-1.824,2.4-1.212-1.6,1.5-1.968A.969.969,0,0,1,6.96-8.208.984.984,0,0,1,7.152-6.852Zm-4.62,2.9,1.212,1.6L2.244-.384A.969.969,0,0,1,.9-.192.971.971,0,0,1,.708-1.536Z"
+                transform="translate(-0.52 8.396)"
+                fill="#9b9b9b"
+              />
+            </svg>
+          </button>
+          <div class="modal-body">
+            <h3 class="modal-title">تعديل كلمة المرور</h3>
+            <h6 class="modal-subtitle">قم بتعيين كلمة مرور جديدة خاصة بك</h6>
+            <div class="btns">
+              <a href="index.html" class="logout modal-btn">نعم , أريد تسجيل الخروج</a>
+              <button data-bs-dismiss="modal" class="stay modal-btn">
+                لا , أرغب في البقاء
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
