@@ -1,4 +1,7 @@
 $(document).ready(function () {
+  sal({
+    once: true,
+  });
   new bootstrap.ScrollSpy(document.body, {
     target: "#fixedNavbar",
   });
@@ -9,7 +12,7 @@ $(document).ready(function () {
       clickable: true,
     },
     autoplay: {
-      delay: 5000,
+      delay: 10000,
       disableOnInteraction: true,
     },
   });
@@ -109,7 +112,6 @@ $(document).ready(function () {
       ? $("header").addClass("header-scroll")
       : $("header").removeClass("header-scroll");
   });
-
 
   $(".menu-icon").on("click", function (e) {
     $(this).toggleClass("active");

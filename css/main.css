@@ -1,3 +1,7 @@
+:root {
+  --sal-duration: 1s;
+}
+
 body {
   --bs-gutter-x: 15px;
 }
@@ -905,6 +909,7 @@ header.header-scroll .header {
   border-radius: 26px;
   box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1607843137);
   background-color: #fff;
+  transition: all 0.3s ease-in-out;
 }
 @media (max-width: 991px) {
   .msggoals-item {
@@ -923,6 +928,13 @@ header.header-scroll .header {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: all 0.8s ease-in-out;
+}
+.msggoals-item:hover {
+  transform: translateY(-5px);
+}
+.msggoals-item:hover .icon {
+  transform: rotate(720deg);
 }
 .msggoals-item .title {
   font-size: 20px;
@@ -1125,6 +1137,17 @@ header.header-scroll .header {
   box-shadow: 0px 0px 30px rgba(115, 115, 115, 0.1607843137);
   margin: 13px 9px;
   height: 110px;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+}
+.grid-slider .client img {
+  transition: all 0.3s ease-in-out;
+}
+.grid-slider .client:hover {
+  transform: translateY(-5px);
+}
+.grid-slider .client:hover img {
+  transform: scale(0.95);
 }
 .grid-slider .swiper-btns {
   position: relative;
@@ -1149,10 +1172,16 @@ header.header-scroll .header {
   align-items: center;
   justify-content: center;
   margin: 0 10px;
+  z-index: 3;
+  transition: all 0.3s ease-in-out;
 }
 .grid-slider .swiper-btns .swiper-button-next::after,
 .grid-slider .swiper-btns .swiper-button-prev::after {
   display: none;
+}
+.grid-slider .swiper-btns .swiper-button-next:hover,
+.grid-slider .swiper-btns .swiper-button-prev:hover {
+  background-color: #007673;
 }
 
 #jobs {
@@ -1197,10 +1226,16 @@ header.header-scroll .header {
   align-items: center;
   justify-content: center;
   margin: 0 10px;
+  z-index: 3;
+  transition: all 0.3s ease-in-out;
 }
 .jobs-slider .swiper-btns .swiper-button-next::after,
 .jobs-slider .swiper-btns .swiper-button-prev::after {
   display: none;
+}
+.jobs-slider .swiper-btns .swiper-button-next:hover,
+.jobs-slider .swiper-btns .swiper-button-prev:hover {
+  background-color: #007673;
 }
 
 .job {
